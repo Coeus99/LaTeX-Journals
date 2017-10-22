@@ -1,4 +1,0 @@
-- Add example
-- Add Sigma sum for exact integral if possible
-- Revise abstract
-- Add error of trap rule
