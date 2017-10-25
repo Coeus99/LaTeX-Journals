@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{4 Bit Adder and Subtracter}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+
+\section{Circuit}
+
+\begin{tikzpicture}
+	\node (M) at (0,0) {$M$};
+	\node (M0) at (3,4) {$M$};
+	\node (A0) at (4,4) {$A_0$};
+	
+	\node (XOR0) [xor gate US, draw, rotate = -90] at ($(M0) + (0.5,-1)$) {};
+	
+	\draw (M0) -| (XOR0.input 2);
+	\draw (A0) -| (XOR0.input 1);
+\end{tikzpicture}
+
+\section{Pre-Derivation}
+2's Compliment definition is equivalent to flipping the bits and adding 1\\
+
+\section{Derivation}
+
+Derivation goes here
+
+\section{Exempli Gratia}
+
+Examples of important instances
+
+\end{document}
