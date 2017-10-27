@@ -1,0 +1,114 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Taylor Series}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$a$; domain value of which the series is about;\\
+$n$; term in series; $x \in \mathbb{Z^+}$\\
+$f^n$; nth derivative of a function;$n\in\mathbb{Z^+}, f^0(a)=f(a)$
+
+\section{Rule}
+
+\begin{gather*}
+\sum_{n = 0}^{\infty}f^n(a)\dfrac{x-a}{n!}^n\\
+= f(a)+f'(a)(x-a)+f''(a)\dfrac{(x-a)^2}{2!}+f'''(a)\dfrac{(x-a)^3}{3!}+f^{\text{iv}}(a)\dfrac{(x-a)^4}{4!}\\
+\vdots\\
++ f^{\text{n-1}}(a)\dfrac{(x-a)^{n-1}}{(n-1)!} + f^{\text{n}}(a)\dfrac{(x-a)^n}{n!}
+\end{gather*}
+
+\section{Pre-Derivation}
+Anything that the derivation relies on goes here
+
+\section{Derivation}
+
+Derivation goes here
+
+\section{Exempli Gratia}
+
+\subsection{Taylor Series Expansion of $e^x$ about 0}
+
+$\begin{array}{c c}
+	\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+		f(x) = e^x\\
+		f'(x) = e^x\\
+		f''(x) = e^\\
+		f'''(x) = e^x\\
+		f^{\text{iv}}(x) = e^x\\
+		\vdots
+	\end{gather*}}
+	&
+	\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+		f(0) = 1\\
+		f'(0) = 1\\
+		f''(0) = 1\\
+		f'''(0) = 1\\
+		f^{\text{iv}}(0) = 1\\
+		\vdots
+	\end{gather*}}
+\end{array}$
+
+\subsection{Taylor Series Expansion of cos about 0}
+
+$\begin{array}{c c}
+\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+	f(x) = \cos x\\
+	f'(x) = -\sin x\\
+	f''(x) = -\cos x\\
+	f'''(x) = \sin x\\
+	f^{\text{iv}}(x) = \cos x\\
+	\vdots
+	\end{gather*}}
+&
+\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+	f(0) = 1\\
+	f'(0) = 0\\
+	f''(0) = -1\\
+	f'''(0) = 0\\
+	f^{\text{iv}}(0) = 1\\
+	\vdots
+	\end{gather*}}
+\end{array}$
+
+\subsection{Taylor Series Expansion of sin about 0}
+
+$\begin{array}{c c}
+\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+	f(x) = \sin x\\
+	f'(x) = \cos x\\
+	f''(x) = -\sin x\\
+	f'''(x) = -\cos x\\
+	f^{\text{iv}}(x) = \sin x\\
+	\vdots
+	\end{gather*}}
+&
+\parbox[c]{0.5\textwidth}{
+	\begin{gather*}
+	f(0) = 0\\
+	f'(0) = 1\\
+	f''(0) = 0\\
+	f'''(0) = -1\\
+	f^{\text{iv}}(0) = 0\\
+	\vdots
+	\end{gather*}}
+\end{array}$
+
+\end{document}
