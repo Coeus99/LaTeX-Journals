@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Binomial Series}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+
+\section{Rule}
+
+Math in text mode... \( f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \)\\
+
+Display mode: \\
+\[ f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \]
+
+\section{Pre-Derivation}
+Anything that the derivation relies on goes here
+
+\section{Derivation}
+
+Derivation goes here
+
+\section{Exempli Gratia}
+
+Relativity Correspondence Argument\\\\
+In 1687, Newton published his second law governing which said the change of momentum of a body is directly proportional to the force applied, and that the energy was proportional to the change in velocity. During this time another scientist named Leibniz discovered that velocity was proportional to the square root of \textsl{vis viva} (or the living force). These discoveries lead to the Kinetic energy formula we know today. This interpretation works fine at lower velocities, however, when you approach the speed of light this energy changes significantly. In 1905, a man named Einstein published his theory of relativity which makes an adjustment to the kinetic energy formula. This formula must correspond to Newton's formula at low velocities otherwise it cannot be true.\\\\
+$c$; speed of light; $c=2.997925\times10^{8}[\frac{m}{s}]$\\
+$v$; velocity; $[\frac{m}{s}]$\\
+$\beta$; relativistic correction; $\beta=\dfrac{v}{c}$\\
+\\
+\begin{gather*}
+	\text{Newton: } K = \dfrac{1}{2}m\,v^2;\\
+	\text{Einstein: } K = m\,c^2(\dfrac{1}{\sqrt{1-\beta^2}}-1)\\
+	\\
+	\text{Recall: }\\ (1-x)^m=1-m\,x+m(m-1)\dfrac{x^2}{2!}-m(m-1)(m-2)\dfrac{x^3}{3!}\dots\\
+	\dfrac{1}{\sqrt{1-\beta^2}}=(1-\beta^2)^{-\frac{1}{2}}\\
+	m = -\dfrac{1}{2}\\
+	x\to \beta^2\\
+	\implies\dfrac{1}{\sqrt{1-\beta^2}}=1-(-\dfrac{1}{2})(\beta^2)+(-\dfrac{1}{2})(1-(-\dfrac{1}{2}))\dfrac{(\beta^2)^2}{2!}-(-\dfrac{1}{2})(1-(-\dfrac{1}{2}))(2-(-\dfrac{1}{2}))\dfrac{(\beta^2)^3}{3!}+\dots\\
+	=1+\dfrac{1}{2}\beta^2+\dfrac{3}{8}\beta^4+\dfrac{15}{48}\beta^6+\dots\\
+	\implies K=m\,c^2(1+\dfrac{1}{2}\beta^2+\dfrac{3}{8}\beta^4+\dfrac{15}{48}\beta^6+\dots-1)\\
+	=m\,c^2(\dfrac{1}{2}\beta^2+\dfrac{3}{8}\beta^4+\dfrac{15}{48}\beta^6+\dots)\\
+	=\dfrac{1}{2}m\,c^2\,b^2+\dfrac{3}{8}m\,c\,\beta^4+\dfrac{15}{48}m\,c^2\,\beta^6+\dots\\
+	=\dfrac{1}{2}m\,c^2\,\dfrac{v^2}{c^2}+\dfrac{3}{8}m\,c^2\,\dfrac{v^4}{c^4}+\dfrac{15}{48}m\,c^2\,\dfrac{v^6}{c^6}+\dots\\
+	=\dfrac{1}{2}m\,v^2+\dfrac{3}{8}m\,\dfrac{v^4}{c^2}+\dfrac{15}{42}m\,\dfrac{v^6}{c^4}+\dots\\
+	\text{if } v << c \text{ then,  }m\,c^2\dfrac{1}{\sqrt{1-\beta^2}}\approx\dfrac{1}{2}m\,v^2
+	\end{gather*}
+\end{document}
