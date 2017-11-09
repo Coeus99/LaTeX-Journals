@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Dot Product}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Dot product, or scalar product, is a form of multiplication of vectors such that $\vec{a} \bullet \vec{b}$ is a scalar. A dot product of vectors can also be a measure of how parallel the two vectors are.
+\end{abstract}
+
+\section{Declarations}
+
+$\bullet$; dot product; $\text{Simple multiplication is used as follows } 1\text{ N}\equiv1\text{ kg}\cdot\text{m/s\textsuperscript{2}}$
+$v_a$;the $a$ component of vector $v$; often denoted with subscripts$_x$, $_y$, and $_z$
+
+\section{Rule}
+
+\begin{gather*}
+	\vec{a}\bullet\vec{b}=|\vec{a}||\vec{b}|\cos\theta\\
+	\\
+	\vec{a}\bullet\vec{b}=a_x\,b_x+a_y\,b_y+a_z\,b_z
+\end{gather*}
+
+\section{Pre-Derivation}
+Orthogonal vectors
+Distributive property of dot product
+Associative property of dot product
+
+\section{Derivation}
+
+\subsection{Geometric Dot Product}
+\subsection{Unit Vector Dot Product}
+\begin{gather*}
+	\vec{a}=<a_x,a_y,a_z>=a_x\cdot\hat{i}+a_y\cdot\hat{j}+a_z\cdot\hat{k}\\
+	\vec{b}=<b_x,b_y,b_z>=b_x\cdot\hat{i}+b_y\cdot\hat{j}+b_z\cdot\hat{k}\\
+\end{gather*}
+\begin{align*}
+	\vec{a}\bullet\vec{b}&=a_x\,b_x\,(\hat{i}\bullet\hat{i})+a_x\,b_y\,(\hat{i}\bullet\hat{j})+a_x\,b_z\,(\hat{i}\bullet\hat{k})\\
+						 &=a_y\,b_x\,(\hat{j}\bullet\hat{i})+a_y\,b_y\,(\hat{j}\bullet\hat{j})+a_y\,b_z\,(\hat{j}\bullet\hat{k})\\
+						 &=a_z\,b_x\,(\hat{k}\bullet\hat{i})+a_z\,b_y\,(\hat{k}\bullet\hat{j})+a_z\,b_z\,(\hat{i}\bullet\hat{k})\\
+\end{align*}
+\centering{Recall different unit vectors are orthogonal and orthogonal vectors have a dot product of 0.}
+\begin{gather*}
+	\vec{a}\bullet\vec{b}=a_x\,b_x\,(\hat{i}\bullet\hat{i})+a_y\,b_y(\hat{j}\bullet\hat{j})+a_z\,b_z\,(\hat{k}\bullet\hat{k})
+\end{gather*}
+\centering{Recall parallel vectors have a dot product of 1.}
+\begin{gather*}
+	\therefore\vec{a}\bullet\vec{b}=a_x\,b_x+a_y\,b_y+a_z\,b_z
+\end{gather*}
+
+\section{Exempli Gratia}
+
+Examples of important instances
+
+\end{document}
