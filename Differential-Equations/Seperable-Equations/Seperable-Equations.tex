@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Separable Equations}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$\frac{dy}{dx}\triangleq y'$; Differential and prime notation equivalence;\\
+$p(y)=\frac{1}{h(y)}$;P is the reciprocal of H, for neatness' sake;
+
+\section{Rule}
+$$\dfrac{dy}{dx}=g(x)\,h(y)$$\\
+$$\implies\int p(y)\,dy=\int g(x)\,dx$$
+
+\section{Pre-Derivation}
+This rule only holds true if a differential equation is of first order and holds the following form, that being the product of two functions, one of x and one of y. See below...\\
+
+$$\dfrac{dy}{dx}=g(x)\,h(y)$$
+
+\section{Derivation}
+
+\begin{align*}
+	\dfrac{dy}{dx}&=g(x)\,h(y)\\
+	\dfrac{1}{h(y)}\dfrac{dx}{dy}&=g(x)\\
+	\text{Let }p(y)&=\dfrac{1}{h(y)},\,h(y)\neq 0\\
+	\therefore\dfrac{dy}{dx}p(y)&=g(x)\\\\
+	\text{Assume }y&=\phi(x),\text{ the solution.}\\
+	\dfrac{dy}{dx}&=\phi '(x)\\\\
+	p(\phi(x))\phi '(x)&=g(x)\\
+	\int p(\phi(x))\phi '(x)dx&=\int g(x) dx\\\\
+	\text{But since }y&=\phi(x)\\
+	\implies dy&=\phi '(x)dx\\\\
+	\therefore \int p(y)\,dy&=\int g(x)\,dx
+\end{align*}
+
+\section{Exempli Gratia}
+
+Examples of important instances
+
+\end{document}
