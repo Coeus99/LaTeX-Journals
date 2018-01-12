@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Linear Differential Equations}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Strategy works with first order, linear differential equations
+\end{abstract}
+
+\section{Declarations}
+
+$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+
+\section{Rule}
+
+\begin{align*}
+&\dfrac{dy}{dx}+p(x)y=f(x)\\
+\implies&\dfrac{d}{dx}[\mu(x)y]=\mu(x)f(x)\\
+\implies&y=\dfrac{\int\mu(x)f(x)}{\mu(x)}\\
+&\text{Where }\mu(x)=e^{\int p(x)dx}
+\end{align*}
+
+\section{Pre-Derivation}
+$$a_1(x)\dfrac{dy}{dx}+a_0(x)y=g(x)$$\\
+Must first get equation into standard form, with the derivative of y alone...
+$$\dfrac{dy}{dx}+\dfrac{a_0(x)}{a_1(x)}y=\dfrac{g(x)}{a_1(x)}$$\\
+$$\text{Let }\dfrac{a_0(x)}{a_1(x)}=p(x),\dfrac{g(x)}{a_1(x)}=f(x)$$\\
+$$\therefore\dfrac{dy}{dx}+p(x)y=f(x)$$
+
+\section{Derivation}
+
+\begin{align*}
+\dfrac{dy}{dx}+p(x)y=f(x)\\
+\mu(x)\dfrac{dy}{dx}+\mu(x)p(x)y=\mu(x)f(x)\\\\
+\text{Finding the integration coeffecient, }\mu(x)...\\
+\exists\mu(x)|\dfrac{d}{dx}[\mu(x)y]&=\mu(x)\dfrac{dy}{dx}+\mu(x)p(x)y\\
+\dfrac{d}{dx}[\mu(x)y]&=\mu(x)\dfrac{dy}{dx}+\dfrac{d}{dx}[\mu(x)]y\\
+\implies\dfrac{d}{dx}[\mu(x)]y&=\mu(x)p(x)y\\
+\dfrac{d}{dx}\mu(x)&=\mu(x)p(x)\\
+\dfrac{1}{\mu(x)}du&=p(x)dx\\
+\int\dfrac{1}{\mu(x)}du&=\int p(x)dx\\
+\implies \ln\mu(x)&=\int p(x)dx\\
+\mu(x)&=e^{\int p(x)dx}\\\\
+\dfrac{d}{dx}[\mu(x)y]=\mu(x)f(x)\\
+\int\dfrac{d}{dx}[\mu(x)y]=\int\mu(x)f(x)\\
+\mu(x)y=\int\mu(x)f(x)\\
+y=\dfrac{\int\mu(x)f(x)}{\mu(x)}
+\end{align*}
+
+\section{Exempli Gratia}
+
+Examples of important instances
+
+\end{document}
