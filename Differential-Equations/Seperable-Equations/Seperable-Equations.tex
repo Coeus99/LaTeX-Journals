@@ -3,6 +3,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+\usepackage{tikz}
+\usepackage{pgfplots}
+
 \begin{document}
 	
 \author{Logan Grosz}
@@ -33,7 +36,7 @@ $$\dfrac{dy}{dx}=g(x)\,h(y)$$
 
 \begin{align*}
 	\dfrac{dy}{dx}&=g(x)\,h(y)\\
-	\dfrac{1}{h(y)}\dfrac{dx}{dy}&=g(x)\\
+	\dfrac{1}{h(y)}\dfrac{dy}{dx}&=g(x)\\
 	\text{Let }p(y)&=\dfrac{1}{h(y)},\,h(y)\neq 0\\
 	\therefore\dfrac{dy}{dx}p(y)&=g(x)\\\\
 	\text{Assume }y&=\phi(x),\text{ the solution.}\\
@@ -47,6 +50,34 @@ $$\dfrac{dy}{dx}=g(x)\,h(y)$$
 
 \section{Exempli Gratia}
 
-Examples of important instances
+\subsection{Solution branches with initial value}
+
+\begin{align*}
+	\dfrac{dy}{dx}&=\dfrac{2x}{y+x^2y},\,y(0)=-2\\
+	y\,dy&=\dfrac{2x}{x^2}dx\\
+	\int y\,dy&=\int\dfrac{2x}{1+x^2}dx\\
+	\dfrac{y^2}{2}&=ln|1+x^2|+C\\
+	\implies\dfrac{y^2}{2}&=ln(1+x^2)+C\\
+	y&=\pm\sqrt{2\,ln(1+x^2)+C}\\\\
+	y(0)&=2\implies x=0,\,y=-2\\
+	\text{using }y^2&=2\,ln(1+x^2)+C\\
+	4&=2\,ln(1+0)+C\\
+	\implies C&=4\\
+\end{align*}
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[
+	xlabel=$x$,
+	ylabel=$y$,
+	axis y line=middle,
+	axis x line=middle,
+	]
+	\addplot[mark=none]{(2*ln(1+x^2)+4)^(1/2)};
+	\addplot[mark=none]{-(2*ln(1+x^2)+4)^(1/2)};
+	\addplot[mark=*] coordinates{(0,-2)};
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+The bottom branch is the solution to the given differential equation because it contains the point. No two discontinuous branches can be solutions at the same time.
 
 \end{document}
