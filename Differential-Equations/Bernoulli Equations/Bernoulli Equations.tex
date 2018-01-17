@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Journal Template}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+
+\section{Rule}
+
+$$\dfrac{dy}{dx}+p(x)y=f(x)y^n,n\ne0\vee1$$\\
+$$u=y^{1-n}$$\\
+
+\section{Pre-Derivation}
+Function must be of first order and in standard form...
+
+$$\dfrac{dy}{dx}+p(x)y=f(x)y^n,n\ne0\vee1$$\\
+
+\section{Derivation}
+
+Derivation goes here
+
+\section{Exempli Gratia}
+
+\subsection{A basic problem...}
+
+\begin{gather*}
+\text{Get in standard form and find n}\\
+\dfrac{dy}{dx}-\dfrac{3y}{2x}=\dfrac{2x}{y}\\
+\implies n = -1\\\\
+\text{Use rule to determine the substitive variable and its derivative}\\
+\text{We know }u=y^{1-n}\text{, so } u=y^2\\
+\implies y=u^{\frac{1}{2}}\\
+\implies \dfrac{dy}{dx}=\dfrac{1}{2u^{\frac{1}{2}}}\dfrac{du}{dx}\\\\
+\text{Substitute}\\
+\dfrac{1}{2u^{\frac{1}{2}}}\dfrac{du}{dx}-\dfrac{3u^{\frac{1}{2}}}{2x}=\dfrac{2x}{u^{\frac{1}{2}}}\\\\
+\text{Get to standard form of a 1st order linear equation.}\\
+\dfrac{du}{dx}-\dfrac{3u}{x}=4x\\\\
+\text{Solve differential equation with respect to }u\\
+\text{We know, }\mu(x)=e^{\int p(x)dx}\\
+\text{Let }p(x)=\dfrac{-3}{x}\\
+\implies\mu(x)=e^{\int \frac{-3}{x}dx}=e^{-3\,ln(x)}=x^{-3}\\\\
+\text{Multiple by }\mu(x)
+\dfrac{du}{dx}x^{-3}-3ux^{-4}=4x^{-2}\\\\
+\text{Apply product rule}\\
+\dfrac{d}{dx}[x^{-3}u]=4x^{-2}\\\\
+\text{Integrate}\\
+\int\dfrac{d}{dx}[x^{-3}u]dx=\int 4x^{-2}dx\\
+x^{-3}u=\dfrac{-4}{x}+C\\
+u=-4x^2+C\,x^3\\\\
+\text{Substitute in for }u\\
+y^2=-4x^2+C\,x^3
+\end{gather*}
+
+\end{document}
