@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{gensymb}
 
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -80,4 +81,54 @@ $$\dfrac{dy}{dx}=g(x)\,h(y)$$
 \end{center}
 The bottom branch is the solution to the given differential equation because it contains the point. No two discontinuous branches can be solutions at the same time.
 
+\subsection{Newton's Law of Heating and Cooling}
+
+A thermometer reads 70$^{\circ}$F before it's placed in an oven. At $\frac{1}{2}$ minute the thermometer reads 110$^{\circ}$F. It reads 145$^{\circ}$F at 1 minute. What is the temperature inside the oven?\\
+
+\begin{gather*}
+\text{Given...}\\
+\dfrac{dT}{dt}\propto T_m-T(t)\\
+T(0)=70\,^{\circ}F\\
+T(\frac{1}{2})=110\,^{\circ}F\\
+T(1)=145\,^{\circ}F\\
+\end{gather*}
+
+\noindent Application of proportionality...\\
+\begin{gather*}
+\dfrac{dT}{dt}\propto T_m-T(t)\implies\dfrac{dT}{dt}=k\,T(t)\\
+\end{gather*}
+
+\noindent Separation of Variables...\\
+\begin{gather*}
+\int \dfrac{dT}{T_m-T(t)}=\int k\,dt\\
+ln(T_m-T(t))=k\,t+C\\
+T_m-T(t)=C\,e^{k\,t}\\
+T(t)=C\,e^{k\,t}+T_m\\
+\end{gather*}
+
+\noindent Determine $T_m$. Find all variables in terms of T.\\\\
+Find $C$ in terms of $T_m$\\
+\begin{gather*}
+T(0)=70\,^{\circ}F=C\,e^{0\,k}+T_m=C+T_m\\
+\implies C=70\,^{\circ}F-T_m\\
+\end{gather*}
+
+\noindent Determine $k$ in terms of $T_m$\\
+\begin{gather*}
+T(\frac{1}{2})=110\,^{\circ}F=C\,e^{\frac{1}{2}k}+T_m\\
+\implies 110\,^{\circ}F-T_m=(70\,^{\circ}F-T_m)e^{\frac{1}{2}k}\\
+\implies \dfrac{110\,^{\circ}F-T_m}{70\,^{\circ}F-T_m}=e^{\frac{1}{2}k}\\
+\implies k=2\,ln(\dfrac{110\,^{\circ}F-T_m}{70\,^{\circ}F-T_m})\\
+\end{gather*}
+
+\noindent Solve for $T_m$\\
+\begin{gather*}
+145\,^{\circ}F=C\,e^{1k}+T_m\\
+145\,^{\circ}F-T_m=(70\,^{\circ}F-T_m)e^{2\,ln(\frac{110\,^{\circ}F-T_m}{70\,^{\circ}F-T_m})}\\
+\implies\dfrac{145\,^{\circ}F-T_m}{70\,^{\circ}F-T_m}=(\dfrac{110\,^{\circ}F-T_m}{70\,^{\circ}F-T_m})^2\\
+145\,^{\circ}F-T_m=\dfrac{(110\,^{\circ}F-T_m)^2}{70\,^{\circ}F-T_m}\\
+T_m^2-215\,T_m+10,150=T_m^2-220\,T_m+12,100\\
+5\,T_m=1,950\\
+T_m=390\,^{\circ}F
+\end{gather*}
 \end{document}
