@@ -1,9 +1,12 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \begin{document}
 	
 \author{Logan Grosz}
-\title{Journal Template}
+\title{2nd Order, Linear, Homogeneous Differential Equations}
 \date{\today}
 
 \maketitle
@@ -28,7 +31,38 @@ Anything that the derivation relies on goes here
 
 \section{Derivation}
 
-Derivation goes here
+	\begin{gather*}
+		a\,y''+b\,y'+c\,y=0\\
+		\text{Where } a,b,y\in k
+	\end{gather*}
+	\begin{align*}
+		\text{Let }y&=e^{m\,x}\\
+		\implies y'&=m\,e^{m\,x}\\
+		\implies y''&=m^2\,e^{m\,x}
+	\end{align*}
+	\begin{align*}
+		a\,m^2\,e^{m\,x}+b\,m\,e^{m\,x}+c\,e^{m\,x}&=0 &\text{Substitution}\\
+		e^{m\,x}(a\,m^2+b\,m+c)&=0 &\text{Distribution}
+	\end{align*}
+	\begin{gather*}
+		\forall x(e^{m\,x})\neq 0\\
+		\implies a\,m^2+b\,m+c=0
+	\end{gather*}
+	\begin{align*}
+		m&=\dfrac{-b\pm\sqrt{b^2-4\,a\,c}}{2\,a} &\text{Quadratic Formula}\\
+		&\text{Let }\Delta=b^2-4\,a\,c &\text{Discriminant}\\
+	\end{align*}
+	\begin{align*}
+		&\text{Case 1: }\Delta>0\implies m_1,m_2\in \mathbb{R}\\
+		&\text{Case 2: }\Delta=0\implies m_1=m_2=\dfrac{-b}{2\,a}\\
+		&\text{Case 3: }\Delta<0\implies m_1,m_2\in \mathbb{C}\\
+	\end{align*}
+	\begin{equation*}
+		y=c_1\,e^{m_1\,x}+c_2\,e^{m_2\,x}
+	\end{equation*}
+	\begin{gather*}
+		\text{Note: Case 2}\implies y_2=y_1\int{\dfrac{e^{\int{P(x)dx}}}{{y_1}^2}dx}
+	\end{gather*}
 
 \section{Exempli Gratia}
 
