@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+	
+\author{Logan Grosz}
+\title{Undetermined-Coefficients}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+	Abstract goes here...
+\end{abstract}
+
+\section{Declarations}
+
+$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+
+\section{Rule}
+
+Non-Homogeneous Linear Differential Equation:
+	\begin{equation*}
+		a\,y^{(n)}+b\,y^{(n-1)}+c\,y^{(n-2)}+\dots+c_{n-1}y'+c_ny=f(x)
+	\end{equation*}
+Solve the subscribed homogeneous linear equation to find $y_c$:
+	\begin{equation*}
+		a\,y^{(n)}+b\,y^{(n-1)}+c\,y^{(n-2)}+\dots+c_{n-1}y'+c_ny=0
+	\end{equation*}
+Find any particular solution, $y_p$ that relates to the right side of the equation. Such as the following...
+	\begin{center}
+		\begin{tabular}{cc}
+			$f(x)$&$p_y$\\
+			\hline
+			$e^x$&$A\,e^x$\\
+			$sin(x)$&$A\,sin(x)+B\,cos(x)$\\
+			$x^n$&$A\,x^n+B\,x^{n-1}+\dots$\\
+		\end{tabular}
+	\end{center}
+Note: Terms in the particular solution must not exist in the complementary solution.\\\\
+\noindent Solution is the combination of $y_c$ and $y_p$.
+	\begin{equation*}
+		y(x)=y_c+y_p
+	\end{equation*}
+\section{Pre-Derivation}
+Anything that the derivation relies on goes here
+
+\section{Derivation}
+
+Derivation goes here
+
+\section{Exempli Gratia}
+
+Examples of important instances
+
+\end{document}

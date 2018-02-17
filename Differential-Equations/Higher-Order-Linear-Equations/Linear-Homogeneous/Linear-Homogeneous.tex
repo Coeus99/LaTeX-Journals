@@ -17,52 +17,90 @@
 
 \section{Declarations}
 
-$variable$; variable description; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
+$\Delta$; Discriminant of the quadratic formula; $variable\quad domain\quad and\quad range,\quad if\quad applicable$
 
 \section{Rule}
 
-Math in text mode... \( f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \)\\
+$$a\,y''+b\,y'+c\,y=0$$
+$$\implies a\,m^2+b\,m+c=0$$
 
-Display mode: \\
-\[ f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \]
-
+	\begin{align}
+		\Delta>0\implies&y=c_2\,e^{m_1x}+c_2\,e^{m_2x}\\
+		\Delta=0\implies&y=c_2\,e^{m\,x}+c_2\,x\,e^{m\,x}\\
+		\Delta<0\implies&y=c_1\,e^{\alpha x}cos(\beta x)+c_2\,e^{\alpha x}sin(\beta x)
+	\end{align}
+\\
+\noindent Note: This method works for homogeneous linear equations of any order. Just need to find roots and substitute for $m$.
 \section{Pre-Derivation}
-Anything that the derivation relies on goes here
+Graphs of sine and cosine (for the sin x =sin-x and cos -x = -cos x)
 
 \section{Derivation}
-
-	\begin{gather*}
-		a\,y''+b\,y'+c\,y=0\\
-		\text{Where } a,b,y\in k
-	\end{gather*}
-	\begin{align*}
-		\text{Let }y&=e^{m\,x}\\
-		\implies y'&=m\,e^{m\,x}\\
-		\implies y''&=m^2\,e^{m\,x}
-	\end{align*}
-	\begin{align*}
-		a\,m^2\,e^{m\,x}+b\,m\,e^{m\,x}+c\,e^{m\,x}&=0 &\text{Substitution}\\
-		e^{m\,x}(a\,m^2+b\,m+c)&=0 &\text{Distribution}
-	\end{align*}
-	\begin{gather*}
-		\forall x(e^{m\,x})\neq 0\\
-		\implies a\,m^2+b\,m+c=0
-	\end{gather*}
-	\begin{align*}
-		m&=\dfrac{-b\pm\sqrt{b^2-4\,a\,c}}{2\,a} &\text{Quadratic Formula}\\
-		&\text{Let }\Delta=b^2-4\,a\,c &\text{Discriminant}\\
-	\end{align*}
-	\begin{align*}
-		&\text{Case 1: }\Delta>0\implies m_1,m_2\in \mathbb{R}\\
-		&\text{Case 2: }\Delta=0\implies m_1=m_2=\dfrac{-b}{2\,a}\\
-		&\text{Case 3: }\Delta<0\implies m_1,m_2\in \mathbb{C}\\
-	\end{align*}
-	\begin{equation*}
-		y=c_1\,e^{m_1\,x}+c_2\,e^{m_2\,x}
-	\end{equation*}
-	\begin{gather*}
-		\text{Note: Case 2}\implies y_2=y_1\int{\dfrac{e^{\int{P(x)dx}}}{{y_1}^2}dx}
-	\end{gather*}
+	\subsection{Solving the Differential Equation}
+		\begin{gather*}
+			a\,y''+b\,y'+c\,y=0\\
+			\text{Where } a,b,y\in k
+		\end{gather*}
+		\begin{align*}
+			\text{Let }y&=e^{m\,x}\\
+			\implies y'&=m\,e^{m\,x}\\
+			\implies y''&=m^2\,e^{m\,x}
+		\end{align*}
+		\begin{align*}
+			a\,m^2\,e^{m\,x}+b\,m\,e^{m\,x}+c\,e^{m\,x}&=0 &\text{Substitution}\\
+			e^{m\,x}(a\,m^2+b\,m+c)&=0 &\text{Distribution}
+		\end{align*}
+		\begin{gather*}
+			\forall x(e^{m\,x})\neq 0\\
+			\implies a\,m^2+b\,m+c=0
+		\end{gather*}
+		\begin{align*}
+			m&=\dfrac{-b\pm\sqrt{b^2-4\,a\,c}}{2\,a} &\text{Quadratic Formula}\\
+			&\text{Let }\Delta=b^2-4\,a\,c &\text{Discriminant}\\
+		\end{align*}
+		\begin{align*}
+			&\text{Case 1: }\Delta>0\implies m_1,m_2\in\mathbb{R}\\
+			&\text{Case 2: }\Delta=0\implies m_1=m_2=\dfrac{-b}{2\,a}\\
+			&\text{Case 3: }\Delta<0\implies m_1,m_2\in\mathbb{C}\\
+		\end{align*}
+	\subsection{Cases 1 \& 2}
+		General solution for cases 1 \& 2:
+		\begin{equation*}
+			y=c_1\,e^{m_1\,x}+c_2\,e^{m_2\,x}
+		\end{equation*}
+		\begin{gather*}
+			\text{Note: Case 2}\implies y_2=y_1\int{\dfrac{e^{\int{P(x)dx}}}{{y_1}^2}dx}
+		\end{gather*}
+	\subsection{Case 3}
+		\begin{gather*}
+			m_1,m_2\in\mathbb{C}\\
+			m_1=\alpha+i\,\beta\\
+			m_2=\alpha-i\,\beta\\
+		\end{gather*}
+		\begin{align*}
+			y(x)=&c_1\,e^{(\alpha+i\,\beta)x}+c_2\,e^{(\alpha-\,\beta)x}&\text{Complex-valued solutions}\\
+			=&c_1\,e^{\alpha x+i\,\beta x}+c_2\,e^{\alpha x-\,\beta x}&\\
+			=&c_1\,e^{\alpha x}\,e^{i\,\beta x}+c_2\,e^{\alpha x}\,e^{-\beta x}&\\
+			e^{i\Theta}=&cos\,\Theta+i\,sin\,\Theta,\,\Theta\in\mathbb{R}&\text{Euler's Formula}\\
+		\end{align*}
+		\begin{align*}
+		 \text{Let }&c_1=c_2=1\\
+			\implies& e^{\alpha x}\,e^{\beta x}+e^{\alpha x}\,e^{-\beta x}\\
+			=&e^{\alpha x}(cos(\beta x)+i\,sin(\beta x)+cos(\beta x)-i\,sin(\beta x))\\
+			=&e^{\alpha x}(2\,cos(\beta x))\\
+			\implies&y_1=e^{\alpha x}\,cos(\beta x)
+		\end{align*}
+		\begin{align*}
+			\text{Let }&c_1=1\,c_2=-1\\
+			\implies& e^{\alpha x}\,e^{\beta x}-e^{\alpha x}\,e^{-\beta x}\\
+			=&e^{\alpha x}(cos(\beta x)+i\,sin(\beta x)-cos(\beta x)-i\,sin(-\beta x))\\
+			=&e^{\alpha x}(cos(\beta x)+i\,sin(\beta x)-cos(\beta x)+i\,sin(\beta x))\\
+			=&2\,i\,e^{\alpha x}sin(\beta x)\\
+			\implies&y_2=c_2\,sin(\beta x)
+		\end{align*}
+		General solution for case 3:
+		\begin{equation*}
+			y=c_1\,e^{\alpha x}cos(\beta x)+c_2\,e^{\alpha x}sin(\beta x)
+		\end{equation*}
 
 \section{Exempli Gratia}
 
