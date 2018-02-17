@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+
 \begin{document}
 	
 \author{Logan Grosz}
@@ -18,20 +20,38 @@ $variable$; variable description; $variable\quad domain\quad and\quad range,\qua
 
 \section{Rule}
 
-Math in text mode... \( f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \)\\
-
-Display mode: \\
-\[ f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} \]
+$$y_2=y_1\int{\dfrac{e^{-\int P(x)dx}}{{y_1}^2}}$$
 
 \section{Pre-Derivation}
 Anything that the derivation relies on goes here
 
 \section{Derivation}
 
-Derivation goes here
+Assume $y_1$ is know. By preliminary theory...
+$$\dfrac{y}{y_1}\notin k$$
+$$\implies \dfrac{y_1}{y}=u(x)\implies y_2=u(x)\,y_1(x)$$
 
 \section{Exempli Gratia}
 
-Examples of important instances
+Find $y_2$ given:
+\begin{equation*}
+	x^2\,y''-3\,x\,y'+4\,y=0,\,y_1=x^2
+\end{equation*}
+\begin{align*}
+	y=&u(x)\,x^2=x^2\,u\\
+	y'=&2\,x\,u+x^2\,u'\\
+	y''=&2\,u+2\,x\,u'+2\,x\,u'+x^2\,u''\\
+	   =&2\,u+4\,x\,u'+x^2\,u''
+\end{align*}
+\begin{align*}
+	0=&x^2(2\,u+2\,x\,u'+x^2\,u)-3\,x(2\,x\,u+x^2\,u')+4(x^2\,u)&\text{Substitution}\\
+	 =&2\,x^2\,u+4\,x^3\,u'+x^4\,u''-6\,x^2\,u-3\,x^3\,u'+4\,x^2\,u&\text{Distribution}\\
+	 =&x^4\,u''+x^3\,u'
+\end{align*}
+\begin{align*}
+	\text{Let }w=&u',\,w'=u''&\\
+	\implies 0=&x^4\,w'+x^3\,w\\
+	\implies 0=&w'+\dfrac{1}{x}\,w &\text{Divide by }x^3
+\end{align*}
 
 \end{document}
