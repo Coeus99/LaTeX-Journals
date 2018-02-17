@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Asymptotic Notations}
+\author{Logan Grosz}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		Asymptotic notation describes function bounds relative to other functions. These can be described as an upper bound, lower bound, and tight bound. These bounds correspond to Big Omicron, Bit Omega, and Big Theta, respectively.
+	\end{abstract}
+
+	\section{Definitions}
+	
+	$$f(n)\,is\,O(g(n)) \iff \lim\limits_{n\to\infty}\dfrac{f(n)}{g(n)}=c,\,0\leq c< \infty$$
+	
+	$$f(n)\,is\,\Omega(g(n)) \iff \lim\limits_{n\to\infty}\dfrac{f(n)}{g(n)}=c,\,0<c\leq\infty$$
+	
+	$$f(n)\,is\,\Theta(g(n)) \iff \lim\limits_{n\to\infty}\dfrac{f(n)}{g(n)}=c,\,0<c<\infty$$
+	
+	\section{Visualizations}
+	
+	\section{Exempli Gratia}
+\end{document}
